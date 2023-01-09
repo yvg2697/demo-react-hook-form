@@ -53,6 +53,7 @@ export default function App() {
             <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
+              placeholder="Enter your password"
               {...register("password", {
                 required: true,
                 validate: {
@@ -87,7 +88,7 @@ export default function App() {
               control={control}
               rules={{ required: true }}
               render={({ field }) => (
-                <Select {...field} isMulti options={departments} />
+                <Select className="mt-2" {...field} isMulti options={departments} />
               )}
             />
             {errors.department && (
